@@ -1,25 +1,14 @@
-# Description
-[Summary of the changes and the related issue. Include relevant motivation and context.]
+# User Story
+As a **USER**
+I want to **delete rounds I no longer need**
+so that **I can keep my rounds log up to date.**
 
-# Related Issue(s)
-Addresses # (tag depending issues)
+# Summary
+From the "Rounds" table in "Rounds" mode, users can click on the garbage can ("delete") button in a row to delete the corresponding round. A dialog should appear to require the user to confirm the deletion before completing the operation. When a round is deleted, it no longer appears in the "Rounds" table and it is removed from `localStorage`.
 
-# Type of Change
-- [ ] New Feature
-- [ ] Bug Fix
-- [ ] Documentation update
-- [ ] Other (describe)
-
-# Testing
-[Describe/cite the tests that you ran to verify your changes. Provide instructions to run the tests.]
-
-# Pre-Submission Checklist
-- [ ] The code executes; my changes do not break the build
-- [ ] My changes do not generate new warnings
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] I have added automated tests demonstrating that the feature works or that fix is correct
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any changes on which this PR depends have been merged and published in upstream modules
+# Acceptance Criteria
+- [ ] When the user clicks on the garbage can icon in a round row, a "Confirm Round Deletion" dialog box appears.
+- [ ] The "Confirm Round Deletion" dialog box asks the user: "Do you really want to delete that round?"
+- [ ] The "Confirm Round Deletion" dialog box has two choice buttons: "No, Cancel" (the default), and "Yes, Delete Round"
+- [ ] Clicking on the "No, Cancel" button dismisses the dialog box without performing further action
+- [ ] Clicking on the "Yes, Delete Round" button dismisses the dialog box and deletes the round from the table and from `localStorage`
